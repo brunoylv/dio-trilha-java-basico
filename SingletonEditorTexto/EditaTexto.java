@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class EditaTexto extends JFrame implements ActionListener {
     JTextArea textArea;
 
-    // Construtor privado para prevenir instanciação externa
     private EditaTexto() {
         super("Editor de Texto");
         setLayout(new BorderLayout());
@@ -35,12 +34,10 @@ public class EditaTexto extends JFrame implements ActionListener {
         setVisible(true);
     }
 
-    // Classe interna estática que contém a instância singleton
     private static class InstanceHolder {
         public static final EditaTexto instancia = new EditaTexto();
     }
 
-    // Método estático que fornece acesso à instância singleton
     public static EditaTexto getInstancia() {
         return InstanceHolder.instancia;
     }
